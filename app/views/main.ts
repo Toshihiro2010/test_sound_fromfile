@@ -33,5 +33,9 @@ export class MainComponent implements OnInit {
 
     }
 
+    test(){
+        console.log("test");
+    }
+
  
 }
