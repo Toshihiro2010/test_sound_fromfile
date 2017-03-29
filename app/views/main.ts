@@ -24,14 +24,11 @@ export class MainComponent implements OnInit {
         let self = this;
         console.log("---------------------ngOnInit--------------------");
         let documents = fs.knownFolders.documents();
-        let folderPath = fs.path.join(documents.path);
-
         let temp = documents.getFolder("mySound");
-        let folder = fs.Folder.fromPath(folderPath);
-
-        console.log(folder.path);
-        let temp_path = folder.path + "/mySound/link_start.mp3";
-
+        
+        console.log("temp => " , JSON.stringify(temp));
+        //let temp_path = folder.path + "/mySound/link_start.mp3";
+        let temp_path = temp.path + "/link_start.mp3";
         self.click = sound.create(temp_path);
 
     }
